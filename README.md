@@ -1,4 +1,26 @@
-# Getting Started with Create React App
+# Bitcoin Price Chart
+
+## The Task:
+
+Using a React based framework (Create React App, NextJS, Preact) of your choice, create a simplified version of a crypto tracking chart. It should plot the price of a cryptocurrency coin of your choice in USD over time, with options to change the time frame.
+
+### Key Decisions
+
+- The third party libraries I decided to use were: @testing-library, styled-components and axios
+- This is a single page application that renders nested child components
+- The useReducer hook was utilized for state management, this allowed for cleaner control of the both the button and the chart when re-rendering upon the update of "time period" selection.
+- Axios was used to make the api call, mainly due to it's popularity and familiarity.
+- The Chart Container contains 2 main components the Chart Controls and the Chart itself. Separting each into it's own component helps with maintainability in the future.
+- A mix of styled-components and classes were used due to time contraints.
+- The useEffect hook was used to trigger the api calls, in an effort to optimize performance and prevent the api call for every refresh, the selected control value was passed as a second arguement to skip applying the effect if the value hasn't changed.
+
+### Potential Next Steps
+
+- Write more tests eg. for ChartContainer Component, mocking api call, triggering useEffect on state update
+- Add More Styling and transition to button controls
+- Add More Data to the Chart
+
+# Create React App General Info
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
